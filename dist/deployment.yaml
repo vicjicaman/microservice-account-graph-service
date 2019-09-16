@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account-graph-deployment
+  namespace: microservices-namespace
+  labels:
+    app: account-graph-deployment
+    moduleid: microservice-account-graph-service
+    version: 1.70.3-account-base-cache-data-prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: account-graph-deployment
+  template:
+    metadata:
+      labels:
+        app: account-graph-deployment
+    spec:
+      containers:
+        -
+          name: app
+          image: 'repoflow/microservice-account-graph-container:1.70.1-account-base-cache-data-prod'
+          env:
+            -
+              name: ROUTE_GRAPH
+              value: /graphql
+            -
+              name: INTERNAL_PORT_GRAPH
+              value: '4000'
+            -
+              name: INTERNAL_URL_DATA
+              value: 'auth-data-service.microservices-namespace:27017/accounts'
+          ports:
+            -
+              containerPort: 4000
