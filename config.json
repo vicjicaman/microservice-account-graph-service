@@ -6,7 +6,7 @@
     },
     "microservice-account-config": {
       "url": "github.com:vicjicaman/microservice-account-config.git",
-      "version": "file:./../microservice-account-config"
+      "version": "1.70.0-account-service-prod"
     }
   }
 }
