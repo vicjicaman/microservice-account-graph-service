@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: '${SERVICE_GRAPH@microservice-account-config}'
+  namespace: '${NAMESPACE@microservice-config}'
+  labels:
+    moduleid: microservice-account-graph-service
+    version: 1.70.0-master
+spec:
+  type: ClusterIP
+  selector:
+    app: '${DEPLOYMENT_GRAPH@microservice-account-config}'
+  ports:
+    -
+      name: microservice-account-graph-port
+      port: '${INTERNAL_PORT_GRAPH@microservice-account-config}'
