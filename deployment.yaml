@@ -30,7 +30,7 @@ spec:
               value: '${INTERNAL_PORT_GRAPH@microservice-account-config}'
             -
               name: AUTH_DATA_INTERNAL_URL
-              value: '${INTERNAL_URL_DATA@microservice-auth-data-config}'
+              value: '${INTERNAL_URL@microservice-auth-data-config}'
           ports:
             -
               containerPort: '${INTERNAL_PORT_GRAPH@microservice-account-config}'
