@@ -6,7 +6,11 @@
     },
     "microservice-account-config": {
       "url": "github.com:vicjicaman/microservice-account-config.git",
-      "version": "1.70.1-master"
+      "version": "1.70.2-master"
+    },
+    "microservice-auth-data-config": {
+      "url": "github.com:vicjicaman/microservice-auth-data-config.git",
+      "version": "1.70.0-master"
     }
   }
 }
