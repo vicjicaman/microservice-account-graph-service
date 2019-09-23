@@ -5,7 +5,7 @@ metadata:
   namespace: microservices-namespace
   labels:
     moduleid: microservice-account-graph-service
-    version: 1.70.3-master
+    version: 1.70.0-home-info-prod
 spec:
   type: ClusterIP
   selector:
